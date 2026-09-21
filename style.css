@@ -1,0 +1,183 @@
+/* OWLAB - One Welfare Lab
+ * Global tokens, accessibility defaults and responsive refinements.
+ */
+
+:root {
+  --owlab-blue: #1a166a;
+  --owlab-ink: #1a1b1e;
+  --owlab-graphite: #3a3f43;
+  --owlab-mist: #e4f2e1;
+  --owlab-sage: #b9c9b4;
+  --owlab-paper: #faf9f5;
+  --owlab-line: rgba(26, 22, 106, 0.15);
+  --owlab-radius: 4px;
+  --owlab-content: 1080px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--owlab-paper);
+}
+
+body {
+  min-width: 320px;
+  background: var(--owlab-paper);
+  color: var(--owlab-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-underline-offset: 0.18em;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--owlab-sage);
+  outline-offset: 3px;
+}
+
+button {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+header {
+  isolation: isolate;
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+header > a {
+  flex-shrink: 0;
+}
+
+header img[alt="OWLAB"] {
+  display: block;
+  object-fit: contain !important;
+}
+
+header + section {
+  padding-top: max(76px, clamp(64px, 12vw, 140px)) !important;
+}
+
+section[id] {
+  scroll-margin-top: 76px;
+}
+
+footer img[alt="OWLAB"] {
+  display: block;
+  object-fit: contain !important;
+}
+
+image-slot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  overflow: hidden;
+  background: rgba(26, 22, 106, 0.08);
+}
+
+.owlab-section-top {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 15px;
+  border: 1px solid rgba(228, 242, 225, 0.38);
+  border-radius: 999px;
+  background: var(--owlab-blue);
+  color: var(--owlab-mist) !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(26, 22, 106, 0.24);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease, background-color 180ms ease;
+}
+
+.owlab-section-top:hover {
+  background: var(--owlab-graphite);
+}
+
+.owlab-section-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 720px) {
+  header {
+    align-items: stretch !important;
+    flex-direction: column;
+    padding: 10px 16px !important;
+  }
+
+  header > a {
+    justify-content: center;
+  }
+
+  header nav {
+    justify-content: center;
+    gap: 8px 12px !important;
+  }
+
+  header nav a {
+    font-size: 12px !important;
+  }
+
+  header + section {
+    padding-top: max(112px, clamp(64px, 12vw, 140px)) !important;
+  }
+
+  section[id] {
+    scroll-margin-top: 112px;
+  }
+
+  .owlab-section-top {
+    right: 14px;
+    bottom: 16px;
+    padding: 10px 12px;
+  }
+
+  footer {
+    align-items: flex-start !important;
+    flex-direction: column;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
