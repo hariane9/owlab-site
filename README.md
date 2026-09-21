@@ -4,7 +4,7 @@ Site institucional da OWLAB, uma estrutura de inteligência pública que aproxim
 
 ## Estrutura
 
-- `owlab-site.html` - página principal do site.
+- `index.html` - página principal do site.
 - `assets/logo.png` - logo em alta resolução usada no cabeçalho e no rodapé.
 - `assets/favicon.svg` - favicon vetorial simplificado para melhor leitura no navegador.
 - `style.css` - tokens visuais, acessibilidade e ajustes responsivos globais.
@@ -17,7 +17,7 @@ O site não precisa de instalação de dependências ou processo de build.
 
 ### Opção 1: abrir diretamente
 
-Abra `owlab-site.html` no navegador.
+Abra `index.html` no navegador.
 
 ### Opção 2: usar um servidor local pelo CMD
 
@@ -28,7 +28,7 @@ cd /d "C:\SITE OWLAB"
 py -m http.server 8000
 ```
 
-Depois acesse [http://localhost:8000/owlab-site.html](http://localhost:8000/owlab-site.html).
+Depois acesse [http://localhost:8000/index.html](http://localhost:8000/index.html).
 
 Para parar o servidor, pressione `Ctrl+C` no CMD.
 
