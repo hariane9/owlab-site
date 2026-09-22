@@ -1,13 +1,21 @@
-# Materiais de trabalho que não fazem parte do site publicado
+# Materiais de trabalho e fontes
 *.pdf
 *.docx
 *.jpg
 *.jpeg
 
-# Manter apenas a logo utilizada pelo site dentro de assets/
+# Dumps e análises temporárias locais
+*.txt
+!robots.txt
+*.json
+
+# Manter assets publicados do site
 assets/*
 !assets/logo.png
+!assets/logo-inverted.png
+!assets/og-image.png
 !assets/favicon.svg
+!assets/favicon*.png
 
 # Arquivos temporários e saídas locais
 tmp/
