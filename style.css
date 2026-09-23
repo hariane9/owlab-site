@@ -351,7 +351,7 @@ ul, ol {
 .hero-section {
   position: relative;
   margin-top: var(--header-height);
-  background: radial-gradient(circle at 68% 45%, #222b7c 0%, #1a1e6a 45%, #13154f 100%);
+  background: radial-gradient(circle at 65% 45%, #22297c 0%, #1a1e6a 45%, #12144d 100%);
   color: var(--owlab-mint-text);
   padding: clamp(60px, 8.5vw, 110px) 0 clamp(64px, 9.5vw, 120px);
   overflow: hidden;
@@ -380,6 +380,7 @@ ul, ol {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(8, 10, 38, 0.38));
 }
 
 .hero-content {
